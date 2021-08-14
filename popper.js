@@ -28,7 +28,7 @@ app = () => {
                     }));
                 }
             });
-        }, 1000 * 29);
+        }, 1000 * 30);
         setInterval(async () => {
             await page.screenshot({ path: `./screenshots/${ID}.png` });
         }, 1000 * 60);
