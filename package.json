@@ -1,0 +1,13 @@
+{
+  "name": "popcat",
+  "version": "1.0.0",
+  "description": "",
+  "main": "popper.js",
+  "scripts": {},
+  "keywords": [],
+  "author": "tawan475",
+  "license": "Apache-2.0",
+  "dependencies": {
+    "puppeteer": "^10.2.0"
+  }
+}
