@@ -24,14 +24,18 @@ let counter = 0;
 
     await page.goto("https://popcat.click/");
     await page.evaluate(() => {
-        for (let i = 0; i < 800; i++) {
+        document.getElementById("app").__vue__.sequential_max_pops = 0;
+        document.cookie = "bot" + '=;expires=Thu, 01 Jan 1970 00:00:01 GMT;';
+        for (let i = 0; i < 799; i++) {
             document.dispatchEvent(new KeyboardEvent('keydown', {
                 key: 'x',
                 ctrlKey: true
             }));
         }
         setInterval(() => {
-            for (let i = 0; i < 800; i++) {
+            document.getElementById("app").__vue__.sequential_max_pops = 0;
+            document.cookie = "bot" + '=;expires=Thu, 01 Jan 1970 00:00:01 GMT;';
+            for (let i = 0; i < 799; i++) {
                 document.dispatchEvent(new KeyboardEvent('keydown', {
                     key: 'x',
                     ctrlKey: true
@@ -39,26 +43,6 @@ let counter = 0;
             }
         }, 30 * 1000);
     });
-    setTimeout(async () => {
-        await page.reload({ waitUntil: ["networkidle0", "domcontentloaded"] });
-        console.log("Reloading the page! normal behavior.");
-        await page.evaluate(() => {
-            for (let i = 0; i < 800; i++) {
-                document.dispatchEvent(new KeyboardEvent('keydown', {
-                    key: 'x',
-                    ctrlKey: true
-                }));
-            }
-            setInterval(() => {
-                for (let i = 0; i < 800; i++) {
-                    document.dispatchEvent(new KeyboardEvent('keydown', {
-                        key: 'x',
-                        ctrlKey: true
-                    }));
-                }
-            }, 30 * 1000);
-        });
-    }, 10 * 60 * 1000);
     console.log("Started! First pop might be \"Too many request\" don't panic.")
 })();
 
