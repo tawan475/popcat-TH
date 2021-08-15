@@ -14,3 +14,17 @@
 1. install node
 2. npm install
 3. npm start
+
+### Contribute
+
+1. มี yarn | npm i -g yarn
+
+```sh
+yarn
+```
+
+ลอง
+
+```sh
+yarn try
+```
