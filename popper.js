@@ -21,19 +21,13 @@ let counter = 0;
 
     await page.goto("https://popcat.click/");
     await page.evaluate(() => {
-        for (let i = 0; i < 800; i++) {
-            document.dispatchEvent(new KeyboardEvent('keydown', {
-                key: 'x',
-                ctrlKey: true
-            }));
-        }
+        document.dispatchEvent(new KeyboardEvent('keydown', {'key':'a'}));
+        document.dispatchEvent(new KeyboardEvent('keyup', {'key':'a'}));
+        
         setInterval(() => {
-            for (let i = 0; i < 800; i++) {
-                document.dispatchEvent(new KeyboardEvent('keydown', {
-                    key: 'x',
-                    ctrlKey: true
-                }));
-            }
+            document.getElementById('app').__vue__.bot = !1;
+            document.getElementById('app').__vue__.sequential_max_pops = 0;
+            document.getElementById('app').__vue__.accumulator = 800;
         }, 30 * 1000);
     });
     console.log("Started! First pop might be \"Too many request\" don't panic.")
