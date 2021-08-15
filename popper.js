@@ -36,7 +36,7 @@ let counter = 0;
             document.dispatchEvent(new KeyboardEvent('keydown', {'key':'a'}));
             document.dispatchEvent(new KeyboardEvent('keyup', {'key':'a'}));
             // ensure that the get event is called
-        }, 30 * 1000);
+        }, 15 * 1000);
     });
     console.log("Started! First pop might be \"Too many request\" don't panic.")
 })();
