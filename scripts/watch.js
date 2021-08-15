@@ -1,5 +1,5 @@
 // @ts-check
-const esbuild = require("esbuild");
+const esbuild = require('esbuild');
 
 (async () => {
   await esbuild.build({
@@ -9,8 +9,8 @@ const esbuild = require("esbuild");
     format: `cjs`,
     watch: {
       onRebuild: (err, res) => {
-        if (err) console.error("watch build failed:", err);
-        else console.log("watch build succeeded:", res);
+        if (err) console.error('watch build failed:', err);
+        else console.log('watch build succeeded:', res);
       },
     },
     outdir: `dist`,

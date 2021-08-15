@@ -8,7 +8,8 @@
     "try": "node dist/popper.js",
     "start": "node build/popper.js",
     "watch": "node scripts/watch.js",
-    "build": "node scripts/build.js"
+    "build": "node scripts/build.js",
+    "format": "prettier \"src/**/*.+(ts)\" --write"
   },
   "dependencies": {
     "puppeteer": "latest"
@@ -16,6 +17,7 @@
   "devDependencies": {
     "@types/node": "^16.6.1",
     "esbuild": "^0.12.20",
+    "prettier": "^2.3.2",
     "typescript": "^4.3.5"
   }
 }
