@@ -15,7 +15,7 @@ let counter = 0;
         
         if (responseBody.startsWith("429")) return console.log("Too many request! Did you forget to close the browser? retrying 30 seconds.")
         var json = JSON.parse(responseBody);
-        console.log("Popped for " + json["Location"]["Name"] + "! x" + ++counter)
+        console.log("Popped for " + json["Location"]["Name"] + "! x" + (++counter * 800))
     });
 
 
