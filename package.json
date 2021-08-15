@@ -1,15 +1,21 @@
 {
   "name": "popcat",
   "version": "1.1.4",
-  "description": "",
-  "main": "popper.js",
-  "scripts": {
-    "start": "node popper.js"
-  },
-  "keywords": [],
   "author": "tawan475",
   "license": "Apache-2.0",
+  "main": "popper.js",
+  "scripts": {
+    "try": "node dist/popper.js",
+    "start": "node build/popper.js",
+    "watch": "node scripts/watch.js",
+    "build": "node scripts/build.js"
+  },
   "dependencies": {
     "puppeteer": "latest"
+  },
+  "devDependencies": {
+    "@types/node": "^16.6.1",
+    "esbuild": "^0.12.20",
+    "typescript": "^4.3.5"
   }
 }

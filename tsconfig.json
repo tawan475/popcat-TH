@@ -1,0 +1,10 @@
+{
+  "include": ["src"],
+  "compilerOptions": {
+    "module": "CommonJS",
+    "target": "ESNext",
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "alwaysStrict": true
+  }
+}
