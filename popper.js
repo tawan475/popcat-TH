@@ -37,22 +37,6 @@ let counter = 0;
             document.dispatchEvent(new KeyboardEvent('keyup', {'key':'a'}));
             // ensure that the get event is called
         }, 15 * 1000); 
-        /*  
-            Change from 30 seconds to 15 seconds,  
-            This result will send to server really around 30 seconds from 60 seconds (optimal)
-
-            Old -> set to 30 * 1000 -> Realtime -> around 60 seconds
-            New -> set to 15 * 1000 -> Realtime -> around 30 seconds
-            or even -> set to 1 * 1000 -> Realtime -> around 30 seconds
-
-            I don't know why, maybe 
-                1. internal popclick server delay
-                2. puppeteer ? 
-                3. etc... 
-
-            comment by: tawan475, sirawit-suk
-
-        */
     });
     console.log("Started! First pop might be \"Too many request\" don't panic.")
 })();
