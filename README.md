@@ -1,6 +1,7 @@
 # วิธีติดตั้ง
 
 ### Windows
+### Video สอนลง https://youtu.be/UZptdL5jHEM
 1. ไปโหลด Node ที่ https://nodejs.org/en/download/
 2. ติดตั้งให้เรียบร้อย
 4. เปิด INSTALL.bat
