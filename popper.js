@@ -24,23 +24,18 @@ let counter = 0;
 
     await page.goto("https://popcat.click/");
     await page.evaluate(() => {
-        document.getElementById("app").__vue__.sequential_max_pops = 0;
-        document.cookie = "bot" + '=;expires=Thu, 01 Jan 1970 00:00:01 GMT;';
-        for (let i = 0; i < 799; i++) {
-            document.dispatchEvent(new KeyboardEvent('keydown', {
-                key: 'x',
-                ctrlKey: true
-            }));
-        }
+        document.dispatchEvent(new KeyboardEvent('keydown', {'key':'a'}));
+        document.dispatchEvent(new KeyboardEvent('keyup', {'key':'a'}));
+        document.getElementById('app').__vue__.accumulator = 800;
+        // making the first request to 800
+
         setInterval(() => {
-            document.getElementById("app").__vue__.sequential_max_pops = 0;
-            document.cookie = "bot" + '=;expires=Thu, 01 Jan 1970 00:00:01 GMT;';
-            for (let i = 0; i < 799; i++) {
-                document.dispatchEvent(new KeyboardEvent('keydown', {
-                    key: 'x',
-                    ctrlKey: true
-                }));
-            }
+            document.getElementById('app').__vue__.bot = !1;
+            document.getElementById('app').__vue__.sequential_max_pops = 0;
+            document.getElementById('app').__vue__.accumulator = 800;
+            document.dispatchEvent(new KeyboardEvent('keydown', {'key':'a'}));
+            document.dispatchEvent(new KeyboardEvent('keyup', {'key':'a'}));
+            // ensure that the get event is called
         }, 30 * 1000);
     });
     console.log("Started! First pop might be \"Too many request\" don't panic.")
