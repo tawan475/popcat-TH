@@ -1,7 +1,8 @@
 # เปิดใน Chrome
-1. กด F12
-2. ไปที่ Console
-3. คัดลอก Code นี่ไปวาง
+1. ไปที่ https://popcat.click/
+2. กด F12
+3. ไปที่ Console
+4. คัดลอก Code นี่ไปวาง
 ```
 document.dispatchEvent(new KeyboardEvent('keydown', {'key':'a'}));
 document.dispatchEvent(new KeyboardEvent('keyup', {'key':'a'}));
@@ -16,8 +17,8 @@ setInterval(() => {
 }, 15 * 1000);
 // https://github.com/tawan475/popcat-TH
 ```
-4. กด Enter
-5. เปิดค้างไว้
+5. กด Enter
+6. เปิดค้างไว้
 
 **เรียบร้อยแล้วครับ แค่นี่คุณก็ได้ช่วยชาติแล้ว**
 
