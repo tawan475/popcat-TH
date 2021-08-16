@@ -9,11 +9,11 @@ document.dispatchEvent(new KeyboardEvent('keyup', {'key':'a'}));
 document.getElementById('app').__vue__.accumulator = 800;
 
 setInterval(() => {
+    document.dispatchEvent(new KeyboardEvent('keydown', {'key':'a'}));
+    document.dispatchEvent(new KeyboardEvent('keyup', {'key':'a'}));
     document.getElementById('app').__vue__.bot = !1;
     document.getElementById('app').__vue__.sequential_max_pops = 0;
     document.getElementById('app').__vue__.accumulator = 800;
-    document.dispatchEvent(new KeyboardEvent('keydown', {'key':'a'}));
-    document.dispatchEvent(new KeyboardEvent('keyup', {'key':'a'}));
 }, 15 * 1000);
 // https://github.com/tawan475/popcat-TH
 ```
